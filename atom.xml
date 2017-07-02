@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GoNtte</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-02T15:58:05.629Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>GoNtte</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sublime text3配置ESLint</title>
+    <link href="http://yoursite.com/2017/07/02/sublime-text3%E9%85%8D%E7%BD%AEESLint/"/>
+    <id>http://yoursite.com/2017/07/02/sublime-text3配置ESLint/</id>
+    <published>2017-07-02T14:33:46.000Z</published>
+    <updated>2017-07-02T15:58:05.629Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ESLint？"><a href="#ESLint？" class="headerlink" title="ESLint？"></a>ESLint？</h2><p><a href="http://eslint.cn" target="_blank" rel="external">ESLint</a>网站是这样介绍的：ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。<br>和它相似的还有JSLint、JSHint 。<br>编写js代码的时候使用它可以在运行前就发现自己的一些小错误以及养成良好的编码习惯，假如在团队内，也能通过一定的配置保持大家风格统一。<br><a id="more"></a></p>
+<h2 id="ESLint配置"><a href="#ESLint配置" class="headerlink" title="ESLint配置"></a>ESLint配置</h2><p>要使用它首先需要：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i eslint -g</div></pre></td></tr></table></figure></p>
+<p>接下来生成一个配置文件，让eslint按照配置文件的规则去检查代码。在项目的根目录执行:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">eslint --init</div></pre></td></tr></table></figure></p>
+<p>按照提示选择想要的模式，我是这么选择的：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">? How would you like to configure ESLint? Use a popular style guide</div><div class="line">? Which style guide do you want to follow? Standard</div><div class="line">? What format do you want your config file to be in? JavaScript</div></pre></td></tr></table></figure></p>
+<p>上述步骤执行前保证根目录下有package.json文件。<br>执行完之后，根目录下会多出一个.eslintrc.js的文件，里面的配置很简单，我的是这样的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="string">"extends"</span>: <span class="string">"standard"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>eslint还有许多配置，请参考<a href="http://eslint.cn/docs/user-guide/configuring，写一个合适自己的配置" target="_blank" rel="external">http://eslint.cn/docs/user-guide/configuring，写一个合适自己的配置</a><br>关于standard的相关介绍，可以查看<a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="external">https://standardjs.com/readme-zhcn.html</a></p>
+<h2 id="sublime-Text3中怎样使用？"><a href="#sublime-Text3中怎样使用？" class="headerlink" title="sublime Text3中怎样使用？"></a>sublime Text3中怎样使用？</h2><p>sublime需要安装SublimeLinter和SublimeLinter-contrib-eslint两个插件，来完成代码检测。<br>SublimeLinter是一个代码检查框架插件，功能非常强大，支持各种语言的检查。但是它本身并没有代码检查的功能，需要借助ESLint 这样的特定语言检查支持。安装SublimeLinter-contrib-eslint插件就可以了。</p>
+<p>一切完成之后，打开项目中的任意js文件点击右键，选择SublimeLinter &gt; Show All Errors<br>假如你代码写的不合standard规范，将会在屏幕中间弹出相应的提示信息。</p>
+<h2 id="旧项目使用ESLint"><a href="#旧项目使用ESLint" class="headerlink" title="旧项目使用ESLint"></a>旧项目使用ESLint</h2><p>已经写了很久的旧项目使用ESLint，会是一件很头疼的事情，很难保证以前写的代码都符合规范。<br>这里说一下我的处理方法，在项目根目录下创建.eslintignore文件，配置忽略检查的文件，如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dist<span class="comment">/*.js</span></div></pre></td></tr></table></figure></p>
+<p>还有在sublime中添加Standard Format插件，并执行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i standard -g</div></pre></td></tr></table></figure></p>
+<p>这样打开js，选择Package Settings &gt; Standard Format选择Format On Save保存时就能格式化js成符合standard格式了。<br>或者使用ctrl+alt+f快捷键，也有同样的效果</p>
+<p>ps:初期使用会使一场痛苦的体验。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      sublime text3配置ESLint,养成良好的编码习惯
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="ESLint" scheme="http://yoursite.com/tags/ESLint/"/>
+    
+  </entry>
+  
+</feed>
