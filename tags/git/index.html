@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GoNtte</title>
+  <title>Tag: git | GoNtte</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="GoNtte">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
 <meta property="og:site_name" content="GoNtte">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GoNtte">
@@ -131,40 +131,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-git常用命令与配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/15/git常用命令与配置/" class="archive-article-date">
+  	<time datetime="2017-07-15T07:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-15</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/15/git常用命令与配置/">git常用命令与配置</a>
+      <a class="archive-article-title" href="/2017/07/15/git常用命令与配置/">git常用命令与配置</a>
     </h1>
   
 
-        
-        <a href="/2017/07/15/git常用命令与配置/" class="archive-article-date">
-  	<time datetime="2017-07-15T07:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对一些git命令与配置，经常忘记。。。现在记录下来，以供日后查找！</p>
-<h3 id="1、生成ssh-key并添加到远程仓库"><a href="#1、生成ssh-key并添加到远程仓库" class="headerlink" title="1、生成ssh key并添加到远程仓库"></a>1、生成ssh key并添加到远程仓库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C "邮箱"</div></pre></td></tr></table></figure>
-<p>查看生成的ssh key<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
-<p>如果添加到github，点击个人页面settings,选择SSH and GPG keys添加即可<br>完成后，在终端输入一下命令，确认是否添加成功<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@git.github.com</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/07/15/git常用命令与配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -176,91 +170,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/15/git常用命令与配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
   
-    <article id="post-sublime-text3配置ESLint" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/sublime-text3配置ESLint/">sublime text3配置ESLint</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/02/sublime-text3配置ESLint/" class="archive-article-date">
-  	<time datetime="2017-07-02T14:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ESLint？"><a href="#ESLint？" class="headerlink" title="ESLint？"></a>ESLint？</h2><p><a href="http://eslint.cn" target="_blank" rel="external">ESLint</a>网站是这样介绍的：ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。<br>和它相似的还有JSLint、JSHint 。<br>编写js代码的时候使用它可以在运行前就发现自己的一些小错误以及养成良好的编码习惯，假如在团队内，也能通过一定的配置保持大家风格统一。<br>
-        
-          <a class="article-more-a" href="/2017/07/02/sublime-text3配置ESLint/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/sublime-text3配置ESLint/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -282,10 +204,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
